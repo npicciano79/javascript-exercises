@@ -1,26 +1,71 @@
-const add = function() {
+const add = function(...vals) {
+  return vals.reduce((first,second) => {
+    return first+second;
+  })
 	
 };
 
-const subtract = function() {
+const subtract = function(a,b) {
+  return a-b;
 	
 };
 
-const sum = function() {
+const sum = function(nums) {
+  let numSum=0;
+  for (let i=0;i<nums.length;i++){
+    numSum=numSum+nums[i];
+  }
+  return Number(numSum);
 	
 };
 
-const multiply = function() {
+const multiply = function(num) {
+  let prod=0;
+  for(let i=0;i<num.length;i++){
+    prod*=num[i]
+  }
+  return Number(prod);
 
 };
 
-const power = function() {
-	
+const power = function(a,b) {
+
+  //itterative solution
+  //return Math.pow(a,b);
+  //let power=1;
+  //for(let i=1;i<=b;i++){
+    //power*=a; }
+  //return power;
+
+  //recursive solution
+  if (b==0){
+    return 1;
+  }else{
+    return a*power(a,b-1);
+  }
+
+
 };
 
-const factorial = function() {
-	
+const factorial = function(value) {
+  
 };
+
+
+
+//subtraction function call
+//num=[1,3,5,7,9];
+power(4,3);
+//factorial(5);
+
+//add function call
+//let vals=[[0,0],[2,2],2,6];
+//for (let i=0; i<vals.length;i++){
+  //add(vals[i]);}
+
+
+
+
 
 // Do not edit below this line
 module.exports = {
