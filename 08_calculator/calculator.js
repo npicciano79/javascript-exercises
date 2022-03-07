@@ -38,24 +38,50 @@ const power = function(a,b) {
   //return power;
 
   //recursive solution
-  if (b==0){
-    return 1;
-  }else{
-    return a*power(a,b-1);
-  }
+  //if (b==0){
+    //return 1;
+  //}else{
+    //return a*power(a,b-1);
+  //}
 
+
+  //second recursive solution
+  if (b!=0){
+    return a*power(a,b-1);
+  }else{
+    return 1;
+  }
 
 };
 
 const factorial = function(value) {
-  
+
+
+
+  //itterative solution, runtime .44s
+  //let tempVal=value-1;
+  //if (value==0){
+  //  return 1;
+  //}else{
+    //while(tempVal>0){
+      //value=tempVal*value;
+      //tempVal-=1
+    //} 
+    //return value;  
+  //}
 };
 
 
 
+
+
+
+factorial(0);
+
+
 //subtraction function call
 //num=[1,3,5,7,9];
-power(4,3);
+//power(5,3);
 //factorial(5);
 
 //add function call
