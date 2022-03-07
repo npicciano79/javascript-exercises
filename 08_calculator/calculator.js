@@ -55,13 +55,20 @@ const power = function(a,b) {
 };
 
 const factorial = function(value) {
+  //recursive solution, runtime .43s
+  if (value==0){
+    return 1;
+  }else{
+    return value*factorial(value-1);
 
+
+  }
 
 
   //itterative solution, runtime .44s
   //let tempVal=value-1;
   //if (value==0){
-  //  return 1;
+    //return 1;
   //}else{
     //while(tempVal>0){
       //value=tempVal*value;
@@ -70,9 +77,6 @@ const factorial = function(value) {
     //return value;  
   //}
 };
-
-
-
 
 
 
