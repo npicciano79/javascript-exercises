@@ -39,15 +39,15 @@ const caesar = function(str,shift){
          //no shift for special characters
          //convert strCode back to character
          shiftChar=String.fromCharCode(strCode);
-         shiftWord+=shiftChar;
+         tempWord.push(shiftChar);
          } 
 
-    return shiftWord;  
+    return tempWord.join();  
     }
     
 
 
-
+let tempWord=[];
 let shiftWord='';
 let shift=1;
 let str='Aaa';
